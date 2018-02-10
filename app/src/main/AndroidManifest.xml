@@ -28,6 +28,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EditEventActivity"></activity>
 
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBzWwgqUhk3hL2UYQXsCIglMuV68_ex-Tw" />
     </application>
 
 </manifest>
+
