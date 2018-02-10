@@ -22,6 +22,12 @@
 
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCoF03MBC82VPpeRTWWxGhL3qfQ7IJQL800"/>
 
+        <activity
+            android:name=".EventPageActivity"
+            android:label="@string/title_activity_event_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditEventActivity"></activity>
+
     </application>
 
 </manifest>
