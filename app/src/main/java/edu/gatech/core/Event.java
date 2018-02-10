@@ -7,6 +7,7 @@ package edu.gatech.core;
 public class Event {
 
     private String name;
+    private String date;
     private int startTime;
     private int endTime;
     private int length;
