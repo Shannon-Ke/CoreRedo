@@ -11,5 +11,4 @@ public enum Attributes {
     LGBTQIA,
     RELIGIOUS, ACADEMIC, OCCUPATIONAL,
     GREEK, ARTS, SPORTS, GAMES;
-    Attributes() {}
 }
