@@ -20,6 +20,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContentEvent extends Activity {
     private FloatingActionButton fab;
     @Override
@@ -33,44 +36,14 @@ public class ContentEvent extends Activity {
                 startActivity(intent);
             }
         });
-        Event nufonia = new Event();
-        nufonia.setName("Nufonia Must Fall");
-        nufonia.setAttributes(new Attributes[]{Attributes.ARTS});
-        nufonia.setStart("19:30");
-        nufonia.setEnd("21:30");
-        nufonia.setOrg("Arts at Tech");
-        nufonia.setDate("February 13, 2018");
-//        nufonia.makeEventPage();
 
-        Event basketball = new Event();
-        basketball.setName("Women's Basketball: GT v NCU");
-        basketball.setAttributes(new Attributes[]{Attributes.SPORTS, Attributes.FEMALE});
-        basketball.setStart("19:00");
-        basketball.setEnd("21:00");
-        basketball.setOrg("GT Sports");
-        basketball.setDate("February 15, 2018");
-//        basketball.makeEventPage();
-
-        Event ccf = new Event();
-        ccf.setName("Thursday Night Dinners");
-        ccf.setAttributes(new Attributes[]{Attributes.RELIGIOUS, Attributes.FREEFOOD});
-        ccf.setStart("18:45");
-        ccf.setEnd("21:00");
-        ccf.setOrg("Arts at Tech");
-        ccf.setDate("February 15, 2018");
-//        ccf.makeEventPage();
-
-        Event qchat = new Event();
-        qchat.setName("Q-Chat: Men's Group");
-        qchat.setAttributes(new Attributes[]{Attributes.MALE, Attributes.LGBTQIA});
-        qchat.setStart("18:00");
-        qchat.setEnd("19:00");
-        qchat.setOrg("LGBTQIA Resource Center");
-        qchat.setDate("February 13, 2018");
-//        qchat.makeEventPage();
-
-        String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
-        ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, events);
+        Model model = Model.getInstance();
+        //String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
+        List<String> names = new ArrayList<>();
+        for (Event e : model.getHardEvents()) {
+            names.add(e.getName());
+        }
+        ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, names);
         ListView eventsList = (ListView) findViewById(R.id.listOfEvents);
         eventsList.setAdapter(listAdapter);
     }
