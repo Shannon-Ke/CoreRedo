@@ -61,9 +61,9 @@ public class EditEventActivity extends AppCompatActivity {
         ArrayAdapter<Attributes> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, Attributes.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tagSpinner.setAdapter(adapter);
-        _event = (Event) getIntent().getParcelableExtra(_event.getName());
-        monthSpinner.setSelection(Event.findPosition(_event.getMonth()));
-        name.setText(_event.getName());
+//        _event = (Event) getIntent().getParcelableExtra(_event.getName());
+//        monthSpinner.setSelection(Event.findPosition(_event.getMonth()));
+//        name.setText(_event.getName());
 
 //        tagButton.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
