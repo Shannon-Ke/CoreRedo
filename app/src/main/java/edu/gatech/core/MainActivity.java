@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_map) {
-//            MapFragment mapFragment = new MapFragment();
-//            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
-//            manager.beginTransaction().replace(R.id.map, mapFragment).commit();
+            MapFragment mapFragment = new MapFragment();
+            android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.mapView, mapFragment).commit();
         } else if (id == R.id.nav_events) {
             startActivity(new Intent(MainActivity.this, ContentEvent.class));
 //        } else if (id == R.id.nav_share) {
