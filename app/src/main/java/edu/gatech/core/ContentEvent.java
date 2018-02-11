@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -36,7 +37,20 @@ public class ContentEvent extends Activity {
                 startActivity(intent);
             }
         });
+        reload();
+        ListView lv = (ListView)findViewById(R.id.listOfEvents);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(getBaseContext(), EventPage.class);
 
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void reload() {
         Model model = Model.getInstance();
         //String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
         List<String> names = new ArrayList<>();
@@ -49,3 +63,5 @@ public class ContentEvent extends Activity {
     }
 
 }
+
+
