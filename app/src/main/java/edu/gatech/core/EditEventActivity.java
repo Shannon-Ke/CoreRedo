@@ -20,12 +20,14 @@ public class EditEventActivity extends AppCompatActivity {
     private Button tagButton;
     private Spinner tagSpinner, monthSpinner, daySpinner, yearSpinner;
     private TextView tags;
-    private String tagString = "";
+    private String tagString;
+    private ContentEvent cEvent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_event);
         tagButton = (Button)findViewById(R.id.button);
+        tagString = "";
         name = (EditText)findViewById(R.id.editText);
         from = (EditText)findViewById(R.id.editText2);
         to = (EditText)findViewById(R.id.editText3);
@@ -54,7 +56,8 @@ public class EditEventActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterY = new ArrayAdapter(this,android.R.layout.simple_spinner_item, yearz);
         adapterY.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(adapterY);
-
+        cEvent = new ContentEvent();
+        _event = new Event();
         tags = (TextView)findViewById(R.id.textView14);
         tags.setMovementMethod(new ScrollingMovementMethod());
         tagSpinner = (Spinner)findViewById(R.id.spinner4);
@@ -65,35 +68,27 @@ public class EditEventActivity extends AppCompatActivity {
 //        monthSpinner.setSelection(Event.findPosition(_event.getMonth()));
 //        name.setText(_event.getName());
 
-//        tagButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                int counter = 0;
-//                tagSpinner = (Spinner)findViewById(R.id.spinner4);
-//                    tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
-//                    tags.setText(tagString + "  ");
-//            }
-//
-//        });
+        tagButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                    tagString += tagSpinner.getSelectedItem() + "  ";
+                    tags.setText(tagString + "  ");
+            }
+
+        });
     }
     public void onAddPressed(View view) {
 
-
+        Model model = Model.getInstance();
 
         _event.setName(name.getText().toString());
+        _event.setDate((String) monthSpinner.getSelectedItem() + " " + daySpinner.getSelectedItem() + ", " + yearSpinner.getSelectedItem());
+        _event.setStart(from.getText().toString());
+        _event.setEnd(to.getText().toString());
+        _event.setOrg(org.getText().toString());
+        model.addToList(_event);
 
-
-
-<<<<<<< HEAD
-        tagButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                int counter = 0;
-                tagSpinner = (Spinner)findViewById(R.id.spinner4);
-                tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
-                    tags.setText(tagString + "  ");
-            }
-=======
->>>>>>> f61b98c34a70c0bc471ede25988e81c6adc923f6
-
+        //cEvent.reload();
         finish();
     }
 }
