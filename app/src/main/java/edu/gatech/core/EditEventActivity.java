@@ -88,7 +88,10 @@ public class EditEventActivity extends AppCompatActivity {
         _event.setOrg(org.getText().toString());
         model.addToList(_event);
 
+
         //cEvent.reload();
         finish();
     }
 }
+
+
