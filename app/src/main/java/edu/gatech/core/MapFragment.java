@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
-    GoogleMap map;
+    private GoogleMap map;
 
     public MapFragment() {
         // Required empty public constructor
@@ -32,24 +32,39 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_map, container, false);
-
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
         return v;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        LatLng gt = new LatLng(33.775466, -84.396264);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         MarkerOptions option = new MarkerOptions();
+        MarkerOptions option1 = new MarkerOptions();
+        MarkerOptions option2 = new MarkerOptions();
+
+        // add GT marker
+        LatLng gt = new LatLng(33.775466, -84.396264);
         option.position(gt).title("Georgia Tech");
         map.addMarker(option);
-        map.moveCamera(CameraUpdateFactory.newLatLng(gt));
+
+        // add Ferst marker
+        LatLng ferst = new LatLng(33.775232, -84.399322);
+        option1.position(ferst).title("Nufonia Must Fall").snippet("February 13, 2018 \n 7:30PM-9:00PM");
+        map.addMarker(option1);
+
+        // add McCamish marker
+        LatLng mccamish = new LatLng(33.780907, -84.392836);
+        option2.position(mccamish).title("Women's Basketball Game").snippet("February 15, 2018 \n 7:00PM-9:00PM");
+        map.addMarker(option2);
+
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gt, 15));
     }
 }
