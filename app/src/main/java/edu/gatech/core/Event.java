@@ -16,7 +16,7 @@ public class Event {
     private String location;
     private int latitude;
     private int longitude;
-    private Attributes attributes;
+    private Attributes[] attributes;
 
     public Event() {
 
