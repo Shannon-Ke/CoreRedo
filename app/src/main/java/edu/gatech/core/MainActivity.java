@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_map) {
             MapFragment mapFragment = new MapFragment();
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.mapView, mapFragment).commit();
+            manager.beginTransaction().replace(R.id.map, mapFragment).commit();
         } else if (id == R.id.nav_events) {
 
 //        } else if (id == R.id.nav_share) {
