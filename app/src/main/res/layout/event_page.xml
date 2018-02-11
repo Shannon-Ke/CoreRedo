@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.gatech.core.EventPage"
-    >
+    tools:context="edu.gatech.core.EventPage">
 
     <TextView
         android:id="@+id/eventNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="34dp"
         android:contentDescription="Name of event"
         android:text="EventName"
@@ -25,11 +24,11 @@
 
     <TextView
         android:id="@+id/time"
-        android:layout_width="69dp"
+        android:layout_width="206dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif"
         android:text="Time"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textAppearance="@android:style/TextAppearance.Material.Body2"
         android:textSize="30sp"
@@ -54,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
+        android:layout_marginStart="4dp"
         android:text="organization"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
