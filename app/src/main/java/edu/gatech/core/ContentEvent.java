@@ -29,7 +29,10 @@ public class ContentEvent extends Activity {
                 startActivity(intent);
             }
         });
+        reload();
+    }
 
+    public void reload() {
         Model model = Model.getInstance();
         //String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
         List<String> names = new ArrayList<>();
@@ -42,3 +45,5 @@ public class ContentEvent extends Activity {
     }
 
 }
+
+

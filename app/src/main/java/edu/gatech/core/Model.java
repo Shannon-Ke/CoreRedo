@@ -14,7 +14,7 @@ public class Model {
     private static final Model _instance = new Model();
     public static Model getInstance() { return _instance; }
 
-
+    private Event currentEvent;
 
     private List<Event> events;
     /**
@@ -32,6 +32,9 @@ public class Model {
      * populate the model with some dummy data.  The full app would not require this.
      * comment out when adding new courses functionality is present.
      */
+    public void addToList(Event event) {
+        events.add(event);
+    }
     private void loadDummyData() {
         Event nufonia = new Event();
         nufonia.setName("Nufonia Must Fall");
@@ -72,6 +75,7 @@ public class Model {
         qchat.setDate("February 13, 2018");
 //        qchat.makeEventPage();
         events.add(qchat);
+        currentEvent = events.get(0);
     }
 
     /**
@@ -79,6 +83,8 @@ public class Model {
      * @return a list of the courses in the app
      */
     public List<Event> getHardEvents() { return events; }
-
+    public void addEvent( Event event) {
+        events.add(event);
+    }
 
 }
