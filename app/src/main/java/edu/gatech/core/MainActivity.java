@@ -1,6 +1,7 @@
 package edu.gatech.core;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.mapView, mapFragment).commit();
         } else if (id == R.id.nav_events) {
-
+            startActivity(new Intent(MainActivity.this, ContentEvent.class));
 //        } else if (id == R.id.nav_share) {
 //
 //        } else if (id == R.id.nav_send) {

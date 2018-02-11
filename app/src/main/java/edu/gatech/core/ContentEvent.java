@@ -15,7 +15,7 @@ public class ContentEvent extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_event_page);
 
         Event nufonia = new Event();
         nufonia.setName("Nufonia Must Fall");
@@ -51,8 +51,8 @@ public class ContentEvent extends Activity {
 
         String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
         ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, events);
-        ListView listOfEvents = (ListView) findViewById(R.id.listOfEvents);
-        listOfEvents.setAdapter(listAdapter);
+        ListView eventsList = (ListView) findViewById(R.id.listOfEvents);
+        eventsList.setAdapter(listAdapter);
     }
 
 }
