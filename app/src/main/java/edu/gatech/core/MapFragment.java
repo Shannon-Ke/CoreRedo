@@ -79,13 +79,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         option.position(studentCenter).title("Q-Chat: Men's Group").snippet("tap for details");
         map.addMarker(option);
 
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gt, 150));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gt, 15));
         map.setOnInfoWindowClickListener(this);
     }
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Intent myIntent = new Intent(this.getActivity(), EventPageActivity.class);
+        Intent myIntent = new Intent(this.getActivity(), EventPage.class);
         startActivity(myIntent);
     }
 }
