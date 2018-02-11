@@ -32,7 +32,7 @@ public class EditEventActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int counter = 0;
                 tagSpinner = (Spinner)findViewById(R.id.spinner4);
-                    tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
+                tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
                     tags.setText(tagString + "  ");
             }
 
