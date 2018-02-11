@@ -72,8 +72,8 @@ public class EditEventActivity extends AppCompatActivity {
         tagButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                    tagString += tagSpinner.getSelectedItem() + "  ";
-                    tags.setText(tagString + "  ");
+                tagString += tagSpinner.getSelectedItem() + "  ";
+                tags.setText(tagString + "  ");
             }
 
         });
@@ -96,5 +96,4 @@ public class EditEventActivity extends AppCompatActivity {
         startActivity(refresh);
     }
 }
-
 
