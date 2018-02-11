@@ -8,4 +8,16 @@
     tools:context="edu.gatech.core.EventPageActivity"
     tools:showIn="@layout/activity_event_page">
 
+
+    <SearchView
+        android:layout_width="372dp"
+        android:layout_height="46dp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <ListView
+        android:layout_width="368dp"
+        android:layout_height="446dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="57dp" />
 </android.support.constraint.ConstraintLayout>
