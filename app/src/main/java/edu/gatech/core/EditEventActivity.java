@@ -28,14 +28,14 @@ public class EditEventActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tagSpinner.setAdapter(adapter);
 
-//        tagButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                int counter = 0;
-//                tagSpinner = (Spinner)findViewById(R.id.spinner4);
-//                    tagString += "  " + tagSpinner.setSelection(_event.getStanding().ordinal());
-//                    tags.setText(tagString + "  ");
-//            }
-//
-//        });
+        tagButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int counter = 0;
+                tagSpinner = (Spinner)findViewById(R.id.spinner4);
+                    tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
+                    tags.setText(tagString + "  ");
+            }
+
+        });
     }
 }
