@@ -35,10 +35,15 @@
             android:name=".EventPageActivity"
             android:label="@string/title_activity_event_page"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".EditEventActivity" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+
+        <activity android:name=".EditEventActivity"></activity>
+
     </application>
 
 </manifest>
+
