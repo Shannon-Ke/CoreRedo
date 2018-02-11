@@ -1,5 +1,6 @@
 package edu.gatech.core;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -91,6 +92,8 @@ public class EditEventActivity extends AppCompatActivity {
 
         //cEvent.reload();
         finish();
+        Intent refresh = new Intent(this, ContentEvent.class);
+        startActivity(refresh);
     }
 }
 
