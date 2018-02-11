@@ -4,16 +4,14 @@ package edu.gatech.core;
  * Created by Megan on 2/10/18.
  */
 
-import java.time.LocalTime;
-
 import com.google.android.gms.maps.model.LatLng;
 
 public class Event {
 
     private String name;
     private Attributes[] attributes;
-    private LocalTime start;
-    private LocalTime end;
+    private String start;
+    private String end;
     private String org;
     private LatLng loc;
     private String date;
@@ -36,17 +34,17 @@ public class Event {
         attributes = newAttributes;
     }
 
-    public LocalTime getStart(){
+    public String getStart(){
         return start;
     }
-    public void setStart(LocalTime newStart){
+    public void setStart(String newStart){
         start = newStart;
     }
 
-    public LocalTime getEnd(){
+    public String getEnd(){
         return end;
     }
-    public void setEnd(LocalTime newEnd){
+    public void setEnd(String newEnd){
         start = newEnd;
     }
 
