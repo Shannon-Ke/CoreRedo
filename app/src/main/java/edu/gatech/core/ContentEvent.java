@@ -12,6 +12,13 @@ import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
+
 
 import java.util.ArrayList;
 import java.util.List;
