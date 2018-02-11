@@ -53,7 +53,7 @@ public class ContentEvent extends Activity {
                 String text = listView.getItemAtPosition(i).toString();
                 Toast.makeText(MainActivity.this, "" + text, Toast.LENGTH_SHORT.show());
             }
-        })
+        });
 
         fab = findViewById(R.id.fabu);
         fab.setOnClickListener(new View.OnClickListener() {
