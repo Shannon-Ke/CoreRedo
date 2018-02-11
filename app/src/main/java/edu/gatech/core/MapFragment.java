@@ -79,7 +79,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         option.position(studentCenter).title("Q-Chat: Men's Group").snippet("tap for details");
         map.addMarker(option);
 
-        map.moveCamera(CameraUpdateFactory.newLatLng(gt));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gt, 150));
         map.setOnInfoWindowClickListener(this);
     }
 

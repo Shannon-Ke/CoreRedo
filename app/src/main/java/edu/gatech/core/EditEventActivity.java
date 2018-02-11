@@ -81,19 +81,6 @@ public class EditEventActivity extends AppCompatActivity {
 
         _event.setName(name.getText().toString());
 
-
-
-<<<<<<< HEAD
-        tagButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                int counter = 0;
-                tagSpinner = (Spinner)findViewById(R.id.spinner4);
-                tagString += "  " + tagSpinner.setSelection(_event.getAttributes()[counter].ordinal());
-                    tags.setText(tagString + "  ");
-            }
-=======
->>>>>>> f61b98c34a70c0bc471ede25988e81c6adc923f6
-
         finish();
     }
 }
