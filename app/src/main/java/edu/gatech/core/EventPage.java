@@ -15,33 +15,35 @@ public class EventPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_page);
-        nameT = findViewById(R.id.eventName);
+        nameT = findViewById(R.id.eventNameTxt);
+
         timeT = findViewById(R.id.time);
         locationT = findViewById(R.id.location);
         organizationT = findViewById(R.id.organization);
         descriptionT = findViewById(R.id.description);
         tags = findViewById(R.id.attributes);
     }
-//    public void setNameT(String newName) {
-//        nameT.setText(newName);
-//    }
-//    public void setTimeT(String newTime) {
-//        timeT.setText(newTime);
-//    }
-//    public void setLocationT(String newLoc) {
-//        locationT.setText(newLoc);
-//    }
-//    public void setOrganizationT(String newOrg) {
-//        organizationT.setText(newOrg);
-//    }
-//    public void setDescriptionT(String newDec) {
-//        descriptionT.setText(newDec);
-//    }
-//    public void settags(Attributes[] newTags) {
-//        String curr = "";
-//        for (Attributes a : newTags) {
-//            curr += a;
-//        }
-//        tags.setText(curr);
-//    }
+    public EventPage() {}
+    public void setNameT(String newName) {
+        nameT.setText(newName);
+    }
+    public void setTimeT(String newTime) {
+        timeT.setText(newTime);
+    }
+    public void setLocationT(String newLoc) {
+        locationT.setText(newLoc);
+    }
+    public void setOrganizationT(String newOrg) {
+        organizationT.setText(newOrg);
+    }
+    public void setDescriptionT(String newDec) {
+        descriptionT.setText(newDec);
+    }
+    public void settags(Attributes[] newTags) {
+        String curr = "";
+        for (Attributes a : newTags) {
+            curr += a;
+        }
+        tags.setText(curr);
+    }
 }

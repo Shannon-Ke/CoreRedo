@@ -33,7 +33,7 @@ public class ContentEvent extends Activity {
         nufonia.setEnd("21:30");
         nufonia.setOrg("Arts at Tech");
         nufonia.setDate("February 13, 2018");
-//        nufonia.makeEventPage();
+        nufonia.makeEventPage();
 
         Event basketball = new Event();
         basketball.setName("Women's Basketball: GT v NCU");
@@ -42,7 +42,7 @@ public class ContentEvent extends Activity {
         basketball.setEnd("21:00");
         basketball.setOrg("GT Sports");
         basketball.setDate("February 15, 2018");
-    //    basketball.makeEventPage();
+        basketball.makeEventPage();
 
         Event ccf = new Event();
         ccf.setName("Thursday Night Dinners");
@@ -51,7 +51,7 @@ public class ContentEvent extends Activity {
         ccf.setEnd("21:00");
         ccf.setOrg("Arts at Tech");
         ccf.setDate("February 15, 2018");
-   //     ccf.makeEventPage();
+        ccf.makeEventPage();
 
         Event qchat = new Event();
         qchat.setName("Q-Chat: Men's Group");
@@ -60,7 +60,7 @@ public class ContentEvent extends Activity {
         qchat.setEnd("19:00");
         qchat.setOrg("LGBTQIA Resource Center");
         qchat.setDate("February 13, 2018");
-    //    qchat.makeEventPage();
+        qchat.makeEventPage();
 
         String[] events = new String[]{nufonia.getName(), basketball.getName(), ccf.getName(), qchat.getName()};
         ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, events);

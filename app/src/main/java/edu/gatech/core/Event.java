@@ -38,17 +38,27 @@ public class Event implements Parcelable {
     }
 
     public Event() {
-
+        this.name = "default name";
+        this.attributes = new Attributes[0];
+        start = "start time";
+        end = "end time";
+        org = "organization";
+        date = "date";
+        month = "January";
+        day = 1;
+        year = 2018;
+        location = "location";
+        description = "description";
     }
-//    public void makeEventPage() {
-//        EventPage page = new EventPage();
-//        page.setNameT(name);
-//        page.setTimeT(month + " " + day + ", " + year);
-//        page.setDescriptionT(description);
-//        page.setLocationT(location);
-//        page.setOrganizationT(org);
-//        page.settags(attributes);
-//    }
+    public void makeEventPage() {
+        EventPage page = new EventPage();
+        page.setNameT(name);
+        page.setTimeT(month + " " + day + ", " + year);
+        page.setDescriptionT(description);
+        page.setLocationT(location);
+        page.setOrganizationT(org);
+        page.settags(attributes);
+    }
     private Event(Parcel in) {
         name = in.readString();
         start = in.readString();
