@@ -46,6 +46,16 @@ public class ContentEvent extends Activity {
             }
         });
         reload();
+        ListView lv = (ListView)findViewById(R.id.listOfEvents);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(getBaseContext(), EventPage.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     public void reload() {
