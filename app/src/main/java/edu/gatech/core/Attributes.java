@@ -10,5 +10,6 @@ public enum Attributes {
     ASIAN, HISPANIC, LATINO, CAUCASIAN, BLACK,
     LGBTQIA,
     RELIGIOUS, ACADEMIC, OCCUPATIONAL,
-    GREEK, ARTS, SPORTS, GAMES
+    GREEK, ARTS, SPORTS, GAMES;
+    Attributes() {}
 }
