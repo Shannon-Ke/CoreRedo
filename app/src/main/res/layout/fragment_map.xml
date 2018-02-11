@@ -4,7 +4,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.gatech.core.MapFragment">
+    tools:context="edu.gatech.core.MapFragment"
+    class="com.google.android.gms.maps.SupportMapFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
